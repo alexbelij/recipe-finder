@@ -34,6 +34,12 @@ const recipeItemMarkup = (item, isFav) => {
           ${isFav(item.href) ? "active" : ""}
           "></i></button>
         </div>
+
+        <div class="extra content">
+        <button class="ui circular black button shareButton" tabindex="0">
+            Share Recipe
+          </button>
+        </div>
       </div>
       `;
 };

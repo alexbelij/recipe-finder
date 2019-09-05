@@ -60,6 +60,22 @@ $(window).ready(() => {
             $(".recipes").append(recipeItemMarkup(item, isFav));
           });
 
+          $(".shareButton").click(e => {
+            const link = $(e.target)
+              .parent()
+              .parent()
+              .find("a")
+              .attr("href");
+
+            $(".ui.basic.modal").modal("show");
+
+            $(".twitter-share-button").attr(
+              "href",
+              `https://twitter.com/intent/tweet?text=Hello%20World!!!%20Check%20this%20recipe%20out%3A%20${link}`
+            );
+
+            $(".ui.basic.modal p.link").text(link);
+          });
           const likeButton = $(".likeButton");
           likeButton.click(e => {
             const link = $(e.target)
