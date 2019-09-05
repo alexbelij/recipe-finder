@@ -1,0 +1,150 @@
+nav,
+footer {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 15px;
+}
+
+footer {
+  width: 100%;
+  background: white;
+  position: fixed;
+  bottom: 0;
+}
+
+button.ui.button.likeButton {
+  margin-top: 10px;
+}
+.button.submit {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.ui.input {
+  width: 500px;
+  height: 50px;
+}
+
+.lead {
+  margin-bottom: 0;
+}
+
+h2.description-header {
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.wrapper,
+.card,
+.pagination-wrapper,
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ui.feed > .event > .content {
+  text-align: center;
+}
+
+.ui.card:first-child {
+  margin-top: 1rem;
+}
+
+.pagination-wrapper {
+  margin: 60px 0px;
+  display: none;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.favorite-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.favorite-wrapper .list .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favorite-wrapper .item .detail {
+  display: flex;
+}
+.favorite-wrapper .item .detail img {
+  margin-right: 25px;
+}
+
+.ui.removeButton {
+  margin-left: auto;
+}
+
+/* ---------------------------------------
+MEDIA QUERIES
+------------------------------------------*/
+
+@media (max-width: 800px) {
+  .favorite-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .favorite-wrapper button.ui.button.removeButton {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .favorite-wrapper button.ui.button.removeButton {
+    font-size: 10px;
+  }
+  .ui.input {
+    width: 400px;
+    height: 45px;
+  }
+
+  .button.submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ui.input {
+    width: 350px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .favorite-wrapper .list .item {
+    flex-direction: column;
+  }
+  .favorite-wrapper button.ui.button.removeButton {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ui.input {
+    width: 90%;
+    height: 35px;
+  }
+}
+
+@media (max-width: 350px) {
+  nav > * {
+    font-size: 12px;
+  }
+}
