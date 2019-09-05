@@ -15,7 +15,8 @@ footer {
   bottom: 0;
 }
 
-button.ui.button.likeButton {
+button.ui.button.likeButton,
+button.ui.button.shareButton {
   margin-top: 10px;
 }
 .button.submit {
