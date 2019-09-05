@@ -152,6 +152,7 @@ $(window).ready(() => {
       getRecipes(input.val(), getCurrentPage() - 1);
       localStorage.setItem("currentPage", getCurrentPage() - 1);
       $("#current").text(getCurrentPage());
+      $(".description").html("");
     }
     if (getCurrentPage() - 1 <= 0) {
       $("#previous").addClass("disabled");
@@ -164,6 +165,7 @@ $(window).ready(() => {
       getRecipes(input.val(), getCurrentPage() + 1);
       localStorage.setItem("currentPage", getCurrentPage() + 1);
       $("#current").text(getCurrentPage());
+      $(".description").html("");
     }
     if (getCurrentPage() > 1) {
       $("#previous").removeClass("disabled");
