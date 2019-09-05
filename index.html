@@ -8,19 +8,78 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <title>Stuff</title>
-    <h1>Whatever</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa
-      eligendi quisquam debitis vitae tempora saepe, voluptatum quo. Quod
-      distinctio, temporib us commodi doloribus natus quis qui. Facilis sapiente
-      exercitationem fuga? sadfsadfsad
-    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Recipe Finder</title>
   </head>
   <body>
+    <div id="nav" class="index"></div>
+    <div class="error"></div>
+    <div class="wrapper">
+      <h2>Search For Recipes</h2>
+      <p class="lead">
+        Have some ingredients in the fridge but don't know what to do with
+        them?<br />
+        Gotcha, just give us your ingredients list and we'll see what recipes
+        we<br />
+        can come up with using the
+        <a href="http://www.recipepuppy.com/" target="_blank"
+          >Recipe Puppy API</a
+        >
+        . You can add recipes your favorites,<br />
+        even share with your friends...
+      </p>
+      <h4>Enter a list of item, in comma seperated values</h4>
+      <div class="ui fluid category search">
+        <div class="ui icon input">
+          <input
+            class="prompt"
+            type="text"
+            placeholder="Search Recipes..."
+            autocomplete="on"
+          />
+          <i class="search icon"></i>
+        </div>
+      </div>
+      <div>
+        <button class="ui black button submit big fluid circular">
+          Search Recipes
+        </button>
+      </div>
+
+      <div class="ui dimmer">
+        <div class="ui text loader">Loading</div>
+      </div>
+
+      <div class="description"></div>
+      <div
+        class="recipes ui stackable grid relaxed equal width container"
+      ></div>
+    </div>
+    <div class="container">
+      <div class="pagination-wrapper">
+        <div class="ui pagination menu">
+          <a class="disabled item" id="previous">
+            Previous
+          </a>
+          <a class="active item" id="current">
+            1
+          </a>
+          <a class="item" id="next">
+            Next
+          </a>
+        </div>
+      </div>
+      <footer>
+        <p>
+          Created with <i class="icon heart pulse"></i> by
+          <a href="https://nafis.co" target="_blank">Nafis Fuad</a>
+        </p>
+      </footer>
+    </div>
+    <script src="./global.js"></script>
+    <script src="./nav.js"></script>
+    <script src="./recipeItemMarkup.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
