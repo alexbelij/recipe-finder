@@ -44,7 +44,7 @@ Checkout the Live demo here: [http://recipe-suit.surge.sh](http://recipe-suit.su
 
 ### Bug Reports:
 
-Please report any bugs [here:](https://github.com/nfuad/Pathshala/issues)
+Please report any bugs [here:](https://github.com/nfuad/recipe-finder/issues)
 
 ### License
 
