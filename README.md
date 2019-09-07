@@ -29,10 +29,11 @@ This is a small web app for searching recipes and saving them to a list of favor
 1. Clean, tidy and well commented code
 1. Semantic UI is used for styling
 1. JQuery for DOM manipulation
+1. For easier code management, many files were created
 
 ### Running Locally
 
-Follow these steps to run the web app on your local machine
+Since no backend technology is geing used for, running this locally is fairly easy:
 
 1. Open up your terminal and type: `git clone https://github.com/nfuad/recipe-finder.git`
 2. Then enter into the cloned repo from the terminal using: `cd recipe-finder` (assuming the directory name wasn't changed while cloning)
@@ -44,7 +45,7 @@ Checkout the Live demo here: [http://recipe-suit.surge.sh](http://recipe-suit.su
 
 ### Bug Reports:
 
-Please report any bugs [here:](https://github.com/nfuad/recipe-finder/issues)
+Please report any bugs [here](https://github.com/nfuad/recipe-finder/issues).
 
 ### License
 
