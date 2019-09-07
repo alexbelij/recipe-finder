@@ -15,10 +15,16 @@ footer {
   bottom: 0;
 }
 
-button.ui.button.likeButton,
-button.ui.button.shareButton {
+p.lead {
+  max-width: 60%;
+  min-width: 50%;
+}
+
+button.ui.button.like-button,
+button.ui.button.share-button {
   margin-top: 10px;
 }
+
 .button.submit {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -85,7 +91,7 @@ h2.description-header {
   margin-right: 25px;
 }
 
-.ui.removeButton {
+.ui.remove-button {
   margin-left: auto;
 }
 
@@ -94,19 +100,30 @@ MEDIA QUERIES
 ------------------------------------------*/
 
 @media (max-width: 800px) {
+  .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .favorite-wrapper {
     width: 90%;
   }
 }
 
+@media (max-width: 767px) {
+  .ui.card {
+    background: aliceblue;
+    border-bottom: 10px solid white;
+  }
+}
+
 @media (max-width: 750px) {
-  .favorite-wrapper button.ui.button.removeButton {
+  .favorite-wrapper button.ui.button.remove-button {
     font-size: 12px;
   }
 }
 
 @media (max-width: 700px) {
-  .favorite-wrapper button.ui.button.removeButton {
+  .favorite-wrapper button.ui.button.remove-button {
     font-size: 10px;
   }
   .ui.input {
@@ -132,7 +149,7 @@ MEDIA QUERIES
   .favorite-wrapper .list .item {
     flex-direction: column;
   }
-  .favorite-wrapper button.ui.button.removeButton {
+  .favorite-wrapper button.ui.button.remove-button {
     margin-top: 15px;
   }
 }
