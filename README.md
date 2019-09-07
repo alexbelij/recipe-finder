@@ -25,7 +25,7 @@ This is a small web app for searching recipes and saving them to a list of favor
 
 1. Site is fully responsive on mobile devices.
 1. Has a very small code footprint
-1.
+1. All errors and edge cases handled gracefully
 1. Clean, tidy and well commented code
 1. Semantic UI is used for styling
 1. JQuery for DOM manipulation
