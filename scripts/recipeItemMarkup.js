@@ -1,5 +1,6 @@
 "use strict";
 
+// Markup for the recipe item
 const recipeItemMarkup = (item, isFav) => {
   return `
       <div class="ui card five wide column">
@@ -28,16 +29,15 @@ const recipeItemMarkup = (item, isFav) => {
           <a href="${
             item.href
           }" target="_blank"><button class="ui button">See Recipe</button></a>
-          <button class="ui button likeButton">Add${
+          <button class="ui button like-button">Add${
             isFav(item.href) ? "ed" : ""
           } To Favorites <i class="like icon
           ${isFav(item.href) ? "active" : ""}
           "></i></button>
         </div>
-
         <div class="extra content">
-        <button class="ui circular black button shareButton" tabindex="0">
-            Share Recipe
+          <button class="ui circular black button share-button" tabindex="0">
+              Share Recipe
           </button>
         </div>
       </div>
