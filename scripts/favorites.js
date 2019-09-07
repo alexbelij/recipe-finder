@@ -1,7 +1,7 @@
 "use strict";
 
 $(window).ready(() => {
-  const favorites = localStorage.getObj("favorites");
+  const favorites = myFavorites();
   favorites.forEach(item => {
     $(".selection.list").append(`
     <div class="item">
@@ -16,7 +16,7 @@ $(window).ready(() => {
               <a href="${item.href}" target="blank">More Info</a>
             </div>
           </div>
-          <button class="ui button removeButton circular">
+          <button class="ui button remove-button circular">
             Remove
           </button>
         </div>
@@ -25,18 +25,18 @@ $(window).ready(() => {
   });
 
   $("span.favorite-count").text(favorites.length);
-  $(".removeButton").click(e => {
+  $(".remove-button").click(e => {
     const link = $(e.target)
       .parent()
       .find("a")
       .attr("href");
     // remove the item from localstorage, cuz it's the second time's click
-    const filteredFavourites = myFavorites().filter((value, index, array) => {
+    const filteredFavourites = favorites.filter((value, index, array) => {
       return value.href !== link;
     });
     // localStorage.removeItem("favorites");
     localStorage.setObj("favorites", filteredFavourites);
-
+    // reload the current window to reflect changes
     location.reload();
   });
 });

@@ -5,7 +5,7 @@ $(window).ready(() => {
   this.setInterval(() => {
     $("nav .button > span").text(myFavorites().length);
   }, 500);
-
+  // show the nav active status based on the class provided
   nav.append(`
   <nav class="ui secondary menu">
     <a class="${nav.attr("class") === "index" ? "active" : ""} item" href="/">
@@ -22,10 +22,10 @@ $(window).ready(() => {
       About
     </a>
 
-    <div class="right menu" style="${
-      nav.attr("class") === "about" ? "display:none" : ""
-    }">
-      <div class="ui black button favorite-count"><i class="heart icon"></i><span></span></div>
+    <div class="right menu">
+      <div class="ui black button favorite-count" style="${
+        nav.attr("class") === "about" ? "display:none" : ""
+      }"><i class="heart icon"></i><span></span></div>
     </div>
 
   </nav>
